@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KARA – karambit noževi, besplatna dostava</title>
+  <meta name="description" content="Karambit noževi u 5 boja. Besplatna dostava, plaćanje karticom.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">🚚 Besplatna dostava na sve narudžbe &nbsp;·&nbsp; 💳 Plaćanje samo karticom</div>
+
+  <header class="header">
+    <a class="logo" href="#">KARA<span>.</span></a>
+    <nav>
+      <a href="#proizvodi">Proizvodi</a>
+      <a href="#info">Informacije</a>
+    </nav>
+    <button class="cart-btn" id="openCart" aria-label="Otvori košaricu">
+      🛒 Košarica <span class="badge" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <section class="hero">
+    <h1>Karambit noževi<br><em>u 5 boja</em></h1>
+    <p>Svaka boja dolazi u dvije opcije – odaberi onu koja ti se sviđa.</p>
+    <a class="btn" href="#proizvodi">Pogledaj ponudu</a>
+  </section>
+
+  <main id="proizvodi" class="section">
+    <h2>Ponuda</h2>
+    <div class="grid" id="grid"></div>
+  </main>
+
+  <section id="info" class="section info">
+    <div><h3>🚚 Besplatna dostava</h3><p>Dostava je besplatna za svaku narudžbu, bez minimalnog iznosa.</p></div>
+    <div><h3>💳 Plaćanje karticom</h3><p>Prihvaćamo samo kartično plaćanje (Visa, Mastercard).</p></div>
+    <div><h3>📐 Specifikacije</h3><p>Duljina 18,8 cm · debljina 4 mm · čelik 3Cr13 · model bez oštrice (safety).</p></div>
+  </section>
+
+  <footer class="footer">© <span id="year"></span> KARA. Sva prava pridržana.</footer>
+
+  <!-- KOŠARICA -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head"><h3>Tvoja košarica</h3><button id="closeCart" aria-label="Zatvori">✕</button></div>
+    <div class="drawer-body" id="cartItems"></div>
+    <div class="drawer-foot">
+      <div class="row"><span>Međuzbroj</span><span id="subtotal">0,00 €</span></div>
+      <div class="row"><span>Dostava</span><strong class="free">BESPLATNO</strong></div>
+      <div class="row total"><span>Ukupno</span><span id="total">0,00 €</span></div>
+      <button class="btn full" id="checkoutBtn">Plati karticom</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
